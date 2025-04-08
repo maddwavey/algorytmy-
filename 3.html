@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Potęgi</title>
+</head>
+<body>
+    <h1>Potęgi</h1>
+    <ul>
+        <li><a href="index.html">strona glowna</a></li>
+        <li><a href="1.html">silnia</a></li>
+        <li><a href="2.html">dodawanie do 100</a></li>
+        <li><a href="3.html">potęgi</a></li>
+    </ul>
+    <img src="potegi.png">
+    <br>podaj podstawę <input type="number" id="base">
+    <br>podaj wykładnik <input type="number" id="exponent">
+    <button id="button">oblicz potęgę</button>
+    <p id="wynik"></p>
+    <script>
+        var przycisk = document.getElementById("button");
+
+        przycisk.addEventListener("click", function() {
+            let base = document.getElementById("base").value;
+            let exponent = document.getElementById("exponent").value;
+            let wynik = document.getElementById("wynik");
+            let power = Math.pow(base, exponent);
+
+            wynik.innerHTML = base + "^" + exponent + "=" + power;
+        });
+    </script>
+</body>
+</html>
